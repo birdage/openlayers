@@ -9,20 +9,6 @@
   ],
   "homepage": "https://openlayers.org/",
   "scripts": {
-    "install": "node tasks/install.js",
-    "postinstall": "closure-util update",
-    "start": "node tasks/serve.js",
-    "lint": "eslint tasks test src examples transforms",
-    "lint-package": "eslint --fix build/package",
-    "pretest": "npm run lint",
-    "test": "npm run karma -- --single-run",
-    "debug-server": "node tasks/serve-lib.js",
-    "karma": "node tasks/test.js start test/karma.config.js",
-    "transform-src": "jscodeshift --transform transforms/module.js src",
-    "changecase-src": "node tasks/filename-case-from-module.js",
-    "transform-examples": "jscodeshift --transform transforms/module.js examples",
-    "transform-test": "jscodeshift --transform transforms/module.js test",
-    "transform": "npm run changecase-src && npm run transform-src && npm run transform-examples && npm run transform-test && npm run lint -- --fix"
   },
   "main": "dist/ol.js",
   "repository": {
@@ -39,7 +25,6 @@
   ],
   "dependencies": {
     "async": "2.5.0",
-    "closure-util": "1.24.0",
     "fs-extra": "4.0.2",
     "jsdoc": "3.5.5",
     "nomnom": "1.8.1",
